@@ -1,0 +1,2 @@
+step,type,amount,nameOrig,oldbalanceOrg,newbalanceOrig,nameDest,oldbalanceDest,newbalanceDest,isFlaggedFraud
+1,3,9839.64,757869,170136.0,160296.36,1662094,0.0,0.0,0

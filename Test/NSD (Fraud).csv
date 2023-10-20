@@ -1,0 +1,2 @@
+Index,trans_date_trans_time,cc_num,merchant,category,amt,first,last,gender,street,city,state,zip,lat,long,city_pop,job,dob,trans_num,unix_time,merch_lat,merch_long
+2449,2408,4613314721966,543,4,281.06,159,307,1,552,165,27,28611,35.9946,-81.7266,885,428,801,1683468,1325466397,36.430124,-81.17948299999999
