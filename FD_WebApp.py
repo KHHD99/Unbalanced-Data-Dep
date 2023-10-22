@@ -3,6 +3,10 @@ import pandas as pd
 import numpy as np
 import pickle
 
+from google.colab import drive
+drive.mount('/content/drive')
+path_models="/content/drive/MyDrive/Khalid Haddou/2ème session /Unbalanced Data Dep/Models"
+
 def header():
     col1, col2  = st.columns([3, 1])
     with col1:
@@ -451,40 +455,43 @@ def Test():
                 ('CC/CC_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), ('CC/CC_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
                 ('CC/CC_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), ('CC/CC_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
             ]
-        # elif dataset_choice == 'Alice Dataset':
-        #     methods_RF = [
-        #         ('CMIYC/CMIYC_RandomForestClassifier_RUS.pkl', 'RUS'), ('CMIYC/CMIYC_RandomForestClassifier_ROS.pkl', 'ROS'),
-        #         ('CMIYC/CMIYC_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), ('CMIYC/CMIYC_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
-        #         ('CMIYC/CMIYC_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), ('CMIYC/CMIYC_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
-        #     ]
-        # elif dataset_choice == 'IEEE dataset':
-        #      methods_RF = [
-        #         ('IEEE/IEEE_RandomForestClassifier_RUS.pkl', 'RUS'), ('IEEE/IEEE_RandomForestClassifier_ROS.pkl', 'ROS'),
-        #         ('IEEE/IEEE_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), ('IEEE/IEEE_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
-        #         ('IEEE/IEEE_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), ('IEEE/IEEE_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
-        #      ]
-        # elif dataset_choice == 'LOAN dataset':
-        #      methods_RF = [
-        #         ('LOAN/LOAN_RandomForestClassifier_RUS.pkl', 'RUS'), ('LOAN/LOAN_RandomForestClassifier_ROS.pkl', 'ROS'),
-        #         ('LOAN/LOAN_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), ('LOAN/LOAN_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
-        #         ('LOAN/LOAN_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), ('LOAN/LOAN_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
-        #      ]
-        # elif dataset_choice == 'NSD dataset':
-        #      methods_RF = [
-        #         ('NSD/NSD_RandomForestClassifier_RUS.pkl', 'RUS'), ('NSD/NSD_RandomForestClassifier_ROS.pkl', 'ROS'),
-        #         ('NSD/NSD_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), ('NSD/NSD_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
-        #         ('NSD/NSD_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), ('NSD/NSD_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
-        #      ]
-        # else:
-        #      methods_RF = [
-        #         ('PS17/PS17_RandomForestClassifier_RUS.pkl', 'RUS'), ('PS17/PS17_RandomForestClassifier_ROS.pkl', 'ROS'),
-        #         ('PS17/PS17_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), ('PS17/PS17_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
-        #         ('PS17/PS17_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), ('PS17/PS17_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
-        #      ]
-        else:
-            st.write(f"""
-                    # RandomForestClassifier is not used in this simulation as the size of algorithms is too large.(you can run the Web App localy and see the results)
-                    """)
+          elif dataset_choice == 'Alice Dataset':
+            methods_RF = [
+                (path_models+'/CMIYC/CMIYC_RandomForestClassifier_RUS.pkl', 'RUS'), (path_models+'/CMIYC/CMIYC_RandomForestClassifier_ROS.pkl', 'ROS'),
+                (path_models+'/CMIYC/CMIYC_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), (path_models+'/CMIYC/CMIYC_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
+                (path_models+'/CMIYC/CMIYC_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), (path_models+'/CMIYC/CMIYC_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
+            ]
+          elif dataset_choice == 'IEEE dataset':
+             methods_RF = [
+                (path_models+'/IEEE/IEEE_RandomForestClassifier_RUS.pkl', 'RUS'), (path_models+'/IEEE/IEEE_RandomForestClassifier_ROS.pkl', 'ROS'),
+                (path_models+'/IEEE/IEEE_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), (path_models+'/IEEE/IEEE_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
+                (path_models+'/IEEE/IEEE_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), (path_models+'/IEEE/IEEE_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
+             ]
+          elif dataset_choice == 'LOAN dataset':
+             methods_RF = [
+                (path_models+'/LOAN/LOAN_RandomForestClassifier_RUS.pkl', 'RUS'), (path_models+'/LOAN/LOAN_RandomForestClassifier_ROS.pkl', 'ROS'),
+                (path_models+'/LOAN/LOAN_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), (path_models+'/LOAN/LOAN_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
+                (path_models+'/LOAN/LOAN_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), (path_models+'/LOAN/LOAN_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
+             ]
+          elif dataset_choice == 'NSD dataset':
+             methods_RF = [
+                (path_models+'/NSD/NSD_RandomForestClassifier_RUS.pkl', 'RUS'), (path_models+'/NSD/NSD_RandomForestClassifier_ROS.pkl', 'ROS'),
+                (path_models+'/NSD/NSD_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), (path_models+'/NSD/NSD_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
+                (path_models+'/NSD/NSD_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), (path_models+'/NSD/NSD_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
+             ]
+          else:
+             methods_RF = [
+                (path_models+'/PS17/PS17_RandomForestClassifier_RUS.pkl', 'RUS'), (path_models+'/PS17/PS17_RandomForestClassifier_ROS.pkl', 'ROS'),
+                (path_models+'/PS17/PS17_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), (path_models+'/PS17/PS17_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
+                (path_models+'/PS17/PS17_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), (path_models+'/PS17/PS17_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
+             ]
+          # else:
+          #   st.write(f"""
+          #           ## RandomForestClassifier is not used in this simulation because the size of the algorithms is too large (you can run the Web application locally and see the results instead).
+          #           """)
+          #   methods_RF = [
+                
+          #   ]
 
         for clf, method_name in methods_RF:
             apply_model_and_display(df, clf, method_name)
