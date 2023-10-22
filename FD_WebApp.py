@@ -271,7 +271,7 @@ def Test():
     # Define a function to apply the model and display the predictions
     def apply_model_and_display(df,load_clf, method_name):
         if df is not None:
-            load_clf = pickle.load(open(f'Models/{load_clf}', 'rb')) 
+            load_clf = pickle.load(open(f'{load_clf}', 'rb')) 
             prediction = load_clf.predict(df)
             prediction_proba = load_clf.predict_proba(df)
             col1, col2 = st.columns(2)
