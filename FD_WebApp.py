@@ -455,31 +455,31 @@ def Test():
                 ('CC/CC_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), ('CC/CC_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
                 ('CC/CC_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), ('CC/CC_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
             ]
-          elif dataset_choice == 'Alice Dataset':
+        elif dataset_choice == 'Alice Dataset':
             methods_RF = [
                 (path_models+'/CMIYC/CMIYC_RandomForestClassifier_RUS.pkl', 'RUS'), (path_models+'/CMIYC/CMIYC_RandomForestClassifier_ROS.pkl', 'ROS'),
                 (path_models+'/CMIYC/CMIYC_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), (path_models+'/CMIYC/CMIYC_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
                 (path_models+'/CMIYC/CMIYC_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), (path_models+'/CMIYC/CMIYC_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
             ]
-          elif dataset_choice == 'IEEE dataset':
+        elif dataset_choice == 'IEEE dataset':
              methods_RF = [
                 (path_models+'/IEEE/IEEE_RandomForestClassifier_RUS.pkl', 'RUS'), (path_models+'/IEEE/IEEE_RandomForestClassifier_ROS.pkl', 'ROS'),
                 (path_models+'/IEEE/IEEE_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), (path_models+'/IEEE/IEEE_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
                 (path_models+'/IEEE/IEEE_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), (path_models+'/IEEE/IEEE_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
              ]
-          elif dataset_choice == 'LOAN dataset':
+        elif dataset_choice == 'LOAN dataset':
              methods_RF = [
                 (path_models+'/LOAN/LOAN_RandomForestClassifier_RUS.pkl', 'RUS'), (path_models+'/LOAN/LOAN_RandomForestClassifier_ROS.pkl', 'ROS'),
                 (path_models+'/LOAN/LOAN_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), (path_models+'/LOAN/LOAN_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
                 (path_models+'/LOAN/LOAN_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), (path_models+'/LOAN/LOAN_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
              ]
-          elif dataset_choice == 'NSD dataset':
+        elif dataset_choice == 'NSD dataset':
              methods_RF = [
                 (path_models+'/NSD/NSD_RandomForestClassifier_RUS.pkl', 'RUS'), (path_models+'/NSD/NSD_RandomForestClassifier_ROS.pkl', 'ROS'),
                 (path_models+'/NSD/NSD_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), (path_models+'/NSD/NSD_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
                 (path_models+'/NSD/NSD_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), (path_models+'/NSD/NSD_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
              ]
-          else:
+        else:
              methods_RF = [
                 (path_models+'/PS17/PS17_RandomForestClassifier_RUS.pkl', 'RUS'), (path_models+'/PS17/PS17_RandomForestClassifier_ROS.pkl', 'ROS'),
                 (path_models+'/PS17/PS17_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), (path_models+'/PS17/PS17_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
