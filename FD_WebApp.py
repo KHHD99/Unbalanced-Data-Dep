@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 
-path_models='https://drive.google.com/drive/folders/1WPIi1d1NKkoM5eNx3zKmhNyw0J2V2kyJ?usp=sharing'
+path_models='https://drive.google.com/drive/folders/1BKnTr6dmAf8DFDbwesoyRfIEQeAKHgfY?usp=share_link'
 
 def header():
     col1, col2  = st.columns([3, 1])
