@@ -2,10 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import (f1_score, confusion_matrix, classification_report, matthews_corrcoef, roc_curve, 
-                            roc_auc_score,accuracy_score, recall_score, precision_score, precision_recall_curve,
-                            cohen_kappa_score, log_loss )
+
 
 def header():
     col1, col2  = st.columns([3, 1])
@@ -457,9 +454,9 @@ def Test():
             ]
         elif dataset_choice == 'Alice Dataset':
             methods_RF = [
-                ('/CMIYC/CMIYC_RandomForestClassifier_RUS.pkl', 'RUS'), ('/CMIYC/CMIYC_RandomForestClassifier_ROS.pkl', 'ROS'),
-                ('https://drive.google.com/file/d/1mh0AsALRTS6ckb-tfra5NARjpCCWSSmu/view?usp=share_link/CMIYC/CMIYC_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), ('/CMIYC/CMIYC_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
-                ('/CMIYC/CMIYC_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), ('/CMIYC/CMIYC_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
+                ('https://drive.google.com/drive/folders/1BKnTr6dmAf8DFDbwesoyRfIEQeAKHgfY?usp=share_link/CMIYC_RandomForestClassifier_RUS.pkl', 'RUS'), ('https://drive.google.com/drive/folders/1BKnTr6dmAf8DFDbwesoyRfIEQeAKHgfY?usp=share_link/CMIYC_RandomForestClassifier_ROS.pkl', 'ROS'),
+                ('https://drive.google.com/drive/folders/1BKnTr6dmAf8DFDbwesoyRfIEQeAKHgfY?usp=share_link/CMIYC_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), ('https://drive.google.com/drive/folders/1BKnTr6dmAf8DFDbwesoyRfIEQeAKHgfY?usp=share_link/CMIYC_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
+                ('https://drive.google.com/drive/folders/1BKnTr6dmAf8DFDbwesoyRfIEQeAKHgfY?usp=share_link/CMIYC_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), ('https://drive.google.com/drive/folders/1BKnTr6dmAf8DFDbwesoyRfIEQeAKHgfY?usp=share_link/CMIYC_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
             ]
         elif dataset_choice == 'IEEE dataset':
              methods_RF = [
@@ -482,7 +479,7 @@ def Test():
         else:
              methods_RF = [
                 ('PS17/PS17_RandomForestClassifier_RUS.pkl', 'RUS'), ('PS17/PS17_RandomForestClassifier_ROS.pkl', 'ROS'),
-                ('PS17/PS17_RandomForestClassifier_SMOTE.pkl', 'SMOTE'),# ('PS17/PS17_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
+                ('PS17/PS17_RandomForestClassifier_SMOTE.pkl', 'SMOTE'), ('PS17/PS17_RandomForestClassifier_SMOTEENN.pkl', 'SMOTEENN'),
                 ('PS17/PS17_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), ('PS17/PS17_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
              ]
         for clf, method_name in methods_RF:
@@ -534,7 +531,7 @@ def Test():
         elif dataset_choice == 'NSD dataset':
              methods_XGB = [
                 ('NSD/NSD_XGBClassifier_RUS.pkl', 'RUS'), ('NSD/NSD_XGBClassifier_ROS.pkl', 'ROS'),
-                ('NSD/NSD_XGBClassifier_SMOTE.pkl', 'SMOTE'),# ('NSD/NSD_XGBClassifier_SMOTEENN.pkl', 'SMOTEENN'),
+                ('NSD/NSD_XGBClassifier_SMOTE.pkl', 'SMOTE'), ('NSD/NSD_XGBClassifier_SMOTEENN.pkl', 'SMOTEENN'),
                 ('NSD/NSD_XGBClassifier_BSMOTE.pkl', 'BSMOTE'), ('NSD/NSD_XGBClassifier_ADASYN.pkl', 'ADASYN')
              ]
         else:
