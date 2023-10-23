@@ -483,8 +483,9 @@ def Test():
         #         ('PS17/PS17_RandomForestClassifier_BSMOTE.pkl', 'BSMOTE'), ('PS17/PS17_RandomForestClassifier_ADASYN.pkl', 'ADASYN')
         #      ]
         else:
+             methods_RF = []
             st.write(f"""
-                    ## This algorithm is not yet deployed due to its large size which is not supported by the github repository.
+                    # This algorithm is not yet deployed due to its large size which is not supported by the github repository.
                     You can choose to run locally the Web App saved on the hard disk or try the corrected version of this project available on the link mention on the repository Inbalanced dataset- fraud detection .Thanks
                     """)
 
